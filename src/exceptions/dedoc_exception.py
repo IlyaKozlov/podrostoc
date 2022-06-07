@@ -1,6 +1,6 @@
 class DedocException(Exception):
 
-    def __init__(self, message, status_code, *args: object) -> None:
+    def __init__(self, message: str, status_code: int, *args: object) -> None:
         super().__init__(*args)
         self.message = message
         self.status_code = status_code

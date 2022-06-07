@@ -10,10 +10,11 @@ class TestStyle(StyleTest):
         source_dir = os.path.join(test_dir, "..", "src")
         result = []
         for directory in [test_dir, source_dir]:
-            for file in os.listdir(directory):
-                file = os.path.abspath(os.path.join(directory, file))
-                if os.path.isfile(file):
-                    result.append(file)
+            for root, _, files in os.walk(directory):
+                for file in files:
+                    file = os.path.abspath(os.path.join(root, file))
+                    if os.path.isfile(file) and file.endswith(".py"):
+                        result.append(file)
         return result
 
     def test_style(self) -> None:
