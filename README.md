@@ -1,0 +1,1 @@
+It is a python client for dedoc, https://github.com/ispras/dedoc/
