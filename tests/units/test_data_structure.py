@@ -8,7 +8,8 @@ from data_structures.parsed_document import ParsedDocument
 class TestDataStructure(unittest.TestCase):
 
     def test_response(self) -> None:
-        path = os.path.join("data", "response.json")
+        path = os.path.join(os.path.dirname(__file__), "..", "data", "response.json")
+        path = os.path.abspath(path)
         with open(path) as file:
             response = json.load(file)
         result = ParsedDocument(**response)

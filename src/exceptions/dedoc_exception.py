@@ -1,0 +1,12 @@
+class DedocException(Exception):
+
+    def __init__(self, message, status_code, *args: object) -> None:
+        super().__init__(*args)
+        self.message = message
+        self.status_code = status_code
+
+    def __str__(self) -> str:
+        return f"DedocException({self.status_code}, {self.message})"
+
+    def __repr__(self) -> str:
+        return str(self)
