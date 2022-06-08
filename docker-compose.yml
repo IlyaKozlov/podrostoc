@@ -11,7 +11,7 @@ services:
           context: .
           dockerfile: docker/Dockerfile
     environment:
-      PYTHONPATH: "/podrostoc/src:/podrostoc/tests"
+      PYTHONPATH: "/podrostoc/podrostoc:/podrostoc/tests"
       DEDOC_HOST: "dedoc"
     command:
       sh /podrostoc/tests/run_test.sh
