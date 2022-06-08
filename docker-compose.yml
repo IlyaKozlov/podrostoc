@@ -1,0 +1,17 @@
+version: '2.4'
+
+services:
+  dedoc:
+    image: "dedocproject/dedoc:version_2022_04_12"
+    ports:
+        - 1231:1231
+
+  test:
+    build:
+          context: .
+          dockerfile: docker/Dockerfile
+    environment:
+      PYTHONPATH: "/podrostoc/src:/podrostoc/tests"
+      DEDOC_HOST: "dedoc"
+    command:
+      sh /podrostoc/tests/run_test.sh

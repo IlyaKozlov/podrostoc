@@ -6,8 +6,8 @@ from exceptions.dedoc_exception import DedocException
 
 
 class TestApi(unittest.TestCase):
-
-    client = DedocClient(dedoc_host="localhost", dedoc_port=1231)
+    host = os.environ.get('DEDOC_HOST', 'localhost')
+    client = DedocClient(dedoc_host=host, dedoc_port=1231)
 
     def test_bad_file(self) -> None:
         file = os.path.join(os.path.dirname(__file__), "..", "data", "file.bin")
