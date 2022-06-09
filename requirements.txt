@@ -1,2 +1,2 @@
-pydantic==1.9.1
-requests==2.27.1
+pydantic>=1.9.1
+requests>=2.25.0
