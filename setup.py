@@ -58,8 +58,6 @@ setup(
         'Programming Language :: Python :: 3 :: Only',
     ],
 
-    package_dir={'podrostoc': 'podrostoc'},
-
     python_requires='>=3.6, <4',
 
 )

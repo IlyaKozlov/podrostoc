@@ -4,8 +4,8 @@ from typing import Dict
 import requests
 from requests import Response
 
-from data_structures.parsed_document import ParsedDocument
-from exceptions.dedoc_exception import DedocException
+from podrostoc.data_structures.parsed_document import ParsedDocument
+from podrostoc.exceptions.dedoc_exception import DedocException
 
 
 class DedocClient:

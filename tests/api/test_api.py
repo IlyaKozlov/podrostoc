@@ -1,8 +1,8 @@
 import os
 import unittest
 
-from client import DedocClient
-from exceptions.dedoc_exception import DedocException
+from podrostoc.client import DedocClient
+from podrostoc.exceptions.dedoc_exception import DedocException
 
 
 class TestApi(unittest.TestCase):

@@ -2,8 +2,8 @@ from typing import List
 
 from pydantic.main import BaseModel
 
-from data_structures.annotation import Annotation
-from data_structures.paragraph_metadata import ParagraphMetadata
+from podrostoc.data_structures.annotation import Annotation
+from podrostoc.data_structures.paragraph_metadata import ParagraphMetadata
 
 
 class TreeNode(BaseModel):

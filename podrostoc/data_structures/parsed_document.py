@@ -2,8 +2,8 @@ from typing import List, Optional
 
 from pydantic import BaseModel
 
-from data_structures.document_content import DocumentContent
-from data_structures.document_metadata import DocumentMetadata
+from podrostoc.data_structures.document_content import DocumentContent
+from podrostoc.data_structures.document_metadata import DocumentMetadata
 
 
 class ParsedDocument(BaseModel):

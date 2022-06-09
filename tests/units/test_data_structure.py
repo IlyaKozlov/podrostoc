@@ -2,7 +2,7 @@ import json
 import os
 import unittest
 
-from data_structures.parsed_document import ParsedDocument
+from podrostoc.data_structures.parsed_document import ParsedDocument
 
 
 class TestDataStructure(unittest.TestCase):
