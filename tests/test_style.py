@@ -1,7 +1,7 @@
 import os
 from typing import List
 
-from style_test import StyleTest
+from utils import StyleTest
 
 
 class TestStyle(StyleTest):

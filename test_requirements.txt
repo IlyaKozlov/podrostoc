@@ -1,2 +1,0 @@
--e git+https://github.com/IlyaKozlov/csd.git#egg=csd
-cowsay==4.0.0

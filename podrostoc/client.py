@@ -21,9 +21,7 @@ class DedocClient:
         r = requests.get(url)
         return r.content.decode().strip()
 
-    def parse_file(self,
-                   file_path: str,
-                   parameters: Dict[str, str]) -> ParsedDocument:
+    def parse_file(self, file_path: str, parameters: Dict[str, str]) -> ParsedDocument:
         response = self._send_request(file_path=file_path, data=parameters)
         parsed_document = self._handle_response(response=response)
         return parsed_document
@@ -34,8 +32,8 @@ class DedocClient:
 
         file_name = os.path.basename(file_path)
         url = f"http://{self.dedoc_host}:{self.dedoc_port}/upload"
-        with open(file_path, 'rb') as file:
-            files = {'file': (file_name, file)}
+        with open(file_path, "rb") as file:
+            files = {"file": (file_name, file)}
             response = requests.post(url, files=files, data=data)
         return response
 

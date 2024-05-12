@@ -2,9 +2,13 @@ FROM python:3.8
 
 
 RUN mkdir /podrostoc
-ADD requirements.txt /podrostoc
-ADD test_requirements.txt /podrostoc
-RUN pip3 install -r /podrostoc/requirements.txt -r /podrostoc/test_requirements.txt
+RUN pip3 install --no-cache-dir poetry
+
+ADD pyproject.toml /podrostoc
+RUN poetry config virtualenvs.create false
+WORKDIR /podrostoc
+RUN cd /podrostoc ; poetry install
+
 ADD podrostoc /podrostoc/podrostoc
 ADD tests /podrostoc/tests
-ENV PYTHONPATH /podrostoc/:/podrostoc/tests
+ENV PYTHONPATH /podrostoc/:/podrostoc/tests:/podrostoc/podrostoc/

@@ -2,7 +2,7 @@ version: '2.4'
 
 services:
   dedoc:
-    image: "dedocproject/dedoc:version_2022_04_12"
+    image: "dedocproject/dedoc:v2.2.1"
     ports:
         - 1231:1231
 

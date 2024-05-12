@@ -1,4 +1,4 @@
-sleep 5
+python3.8 /podrostoc/tests/wait_connection.py
 python3.8 -m unittest -v -f /podrostoc/tests/test_style.py /podrostoc/tests/api/test* /podrostoc/tests/api/test*
 test_exit_code=$?
 if [ $test_exit_code -eq 0 ]
